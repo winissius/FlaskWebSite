@@ -14,5 +14,9 @@ def homepage():
 def contact():
     return render_template("contacts.html")
 
+@app.route("/users/<username>")
+def users(username):
+    return render_template("users.html", username=username)
+
 # publish website
 app.run(debug=True)
